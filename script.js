@@ -34,22 +34,3 @@ function getInputValue(flightRate) {
     const flightCount = parseInt(flightInput.value);
     return flightCount;
 }
-
-
-// For Bonus Mark:
-const booking = document.getElementById('give-order');
-booking.addEventListener('click', function () {
-    const bookingArea = document.getElementById('booking-area');
-    bookingArea.style.display = "none";
-    const countVip = getInputValue('vip');
-    const countEconomy = getInputValue('economy');
-    if (countVip != 0 || countEconomy != 0) {
-        const congratsArea = document.getElementById('congrats-area');
-        congratsArea.style.display = "block";
-    }
-    else{
-        const sorryArea = document.getElementById('sorry-area');
-        sorryArea.style.display = "block";
-    }
-
-});
